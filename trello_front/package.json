@@ -1,46 +1,35 @@
 {
-  "name": "trello_front",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "core-js": "^2.6.5",
-    "vue": "^2.6.10"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.3",
-    "@vue/cli-plugin-eslint": "^3.0.3",
-    "@vue/cli-service": "^3.0.3",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
+    "name": "trello_front",
+    "version": "1.0.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cornflourblue/vue-role-based-authorization-example.git"
     },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
+    "license": "MIT",
+    "scripts": {
+        "start": "webpack-dev-server --open"
+    },
+    "dependencies": {
+        "rxjs": "^6.4.0",
+        "vue": "^2.6.8",
+        "vue-router": "^3.0.2",
+        "vue-smooth-dnd": "^0.8.0",
+        "vuelidate": "^0.7.4",
+        "vuex": "^3.1.1"
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.5",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-stage-0": "^6.24.1",
+        "babel-preset-vue": "^2.0.2",
+        "css-loader": "^2.1.1",
+        "html-webpack-plugin": "^3.2.0",
+        "path": "^0.12.7",
+        "vue-loader": "^15.7.0",
+        "vue-template-compiler": "^2.6.8",
+        "webpack": "^4.29.6",
+        "webpack-cli": "^3.2.3",
+        "webpack-dev-server": "^3.2.1"
     }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
 }
