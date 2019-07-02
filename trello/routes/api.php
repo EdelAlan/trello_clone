@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,21 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::post('login', 'ApiController@login');
+Route::post('register', 'ApiController@register');
+
+Route::group(['middleware' => 'auth.jwt'], function () {
+    Route::get('logout', 'ApiController@logout');
+
+    Route::get('user', 'ApiController@getAuthUser');
+
+    Route::get('columns', 'ColumnController@index');
+    Route::post('columns', 'ColumnController@addColumn');
+    Route::put('columns/{id}', 'ColumnController@updateColumn');
+    Route::delete('columns/{id}', 'ColumnController@deleteColumn');
+
+    Route::get('cards', 'CardController@index');
+    Route::post('cards', 'CardController@addCard');
+    Route::put('cards/{id}', 'CardController@updateCard');
+    Route::delete('cards/{id}', 'CardController@deleteCard');
 });
