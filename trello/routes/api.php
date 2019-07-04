@@ -25,10 +25,12 @@ Route::group(['middleware' => 'auth.jwt'], function () {
     Route::get('columns', 'ColumnController@index');
     Route::post('columns', 'ColumnController@addColumn');
     Route::put('columns/{id}', 'ColumnController@updateColumn');
+    Route::put('columns', 'ColumnController@updatePositions');
     Route::delete('columns/{id}', 'ColumnController@deleteColumn');
 
     Route::get('cards', 'CardController@index');
     Route::post('cards', 'CardController@addCard');
     Route::put('cards/{id}', 'CardController@updateCard');
+    Route::put('cards', 'CardController@updatePositions');
     Route::delete('cards/{id}', 'CardController@deleteCard');
 });
